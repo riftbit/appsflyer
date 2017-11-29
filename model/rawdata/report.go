@@ -29,6 +29,21 @@ type Report struct {
 	SDKVersion          string `json:"sdk_version" csv:"SDK Version"`
 	UserAgent           string `json:"user_agent" csv:"User Agent"`
 	OriginalURL         string `json:"original_url" csv:"Original URL"`
+	
+	//ORGANIC INSTALLS ADDITIONAL DATA
+	Carrier      string `json:"carrier" csv:"Carrier"`
+	City         string `json:"city" csv:"City"`
+	CountryCode  string `json:"country_code" csv:"Country Code"`
+	DeviceType   string `json:"device_type" csv:"Device Type"`
+	HTTPReferrer string `json:"http_referrer" csv:"HTTP Referrer"`
+	Language     string `json:"language" csv:"Language"`
+	Operator     string `json:"operator" csv:"Operator"`
+	Platform     string `json:"platform" csv:"Platform"`
+	Region       string `json:"region" csv:"Region"`
+	WIFI         string `json:"wifi" csv:"WIFI"`
+	BundleID     string `json:"bundle_id" csv:"Bundle ID"`
+	AppName     string `json:"app_name" csv:"App Name"`
+	AppID     string `json:"app_ID" csv:"App ID"`
 }
 
 func (r *Report) GetAttributedTouchTime() (time.Time, error) {
